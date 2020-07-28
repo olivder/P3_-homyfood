@@ -1,0 +1,51 @@
+/* fonts */
+$main_font: 'Montserrat', sans-serif;
+$lanote_title_font: 'Devonshire', cursive;
+$second_font: 'kalam', cursive;
+$menu_delice_palette: 'Satisfy', cursive;
+$lechic_font: 'Source Serif Pro', serif;
+$lechic_title_font: 'Croissant One', serif;
+$delice_title_font: 'Caladea', serif;
+$palette_title_font: 'Kaushan Script', cursive;
+/* colors */
+$primary_color: #579c87;
+$secondary_color: #ffffff;
+$lanotebg_color: #f1eceb;
+$lechicbg_color: #f8f5f8;
+$delicebg_color: #e7e2e2;
+$palettebg_color: #f8faf8;
+/* fonts colors */
+$logo_color: #fdcb46;
+$lanote_menu: #3c1218;
+$lechic_menu1: #c77412;
+$lechic_menu2: #a56799;
+$lechic_menu3: #6e4ccc;
+$delice_menu: #0d7ceb;
+$palette_menu: #72bf56;
+$delice_palette_page: #000000;
+/* gradient colors */
+$lechic_menu_gradient: #905bfd;
+$delice_menu_gradient1: #0431df;
+$delice_menu_gradient2: #518cf0;
+$delice_menu_gradient3: #0887fb;
+$palette_menu_gradient1: #3d9339;
+$palette_menu_gradient2: #bfff7e;
+/* icon colors */
+$first_note_color: #f04a5e;
+$second_note_color: #f78f6a;
+/* box shadow */
+$box_shadow: 0 0 20px grey;
+/* Responsive */
+
+    /* Small tablets and large smartphones */
+    $screen-sm-min: 576px;
+
+    /* Small tablets (portrait view)*/
+    $screen-md-min: 768px;
+
+    /* Tablets and small desktops*/
+    $screen-lg-min: 992px;
+
+    /* Large tablets and desktops*/
+    $screen-xl-min: 1200px;
+

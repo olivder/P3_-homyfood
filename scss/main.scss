@@ -1,0 +1,17 @@
+@import "./utils/keyframes";
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./pages/accueil";
+@import "./pages/lanote";
+@import "./pages/lechic";
+@import "./pages/delice";
+@import "./pages/palette";
+@import "./pages/mentionslegales";
+
+body {
+    margin: auto;
+}
+
+h3 {
+    font-weight: normal;
+}
