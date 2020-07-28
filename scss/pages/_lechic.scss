@@ -1,0 +1,103 @@
+.lechic {
+    @include lechic;
+    @include md {
+        width: 80%;
+    }
+    @include lg {
+        width: 70%;
+        padding-bottom: 90px;
+    }
+    box-shadow: $box-shadow;
+    width: 90%;
+    height: auto;
+    padding-left: 10px;
+    padding-right:10px;
+    margin: auto auto 30px auto;
+    h2
+    {
+        font-size: 1.3em;
+        font-weight: bold;
+        @include md {
+            font-size: 1.5em;
+        }
+        @include lg {
+            font-size: 1.6em;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    h3 {
+        margin: 40px;
+        @include lg {
+        margin: 90px;
+        }
+    }
+    .price {
+        font-weight: bold;
+    }
+    &__title--gradient {
+        @include lechic__title--gradient;
+        font-size: 2em;
+        @include lg {
+            font-size: 2.5em;
+        }
+    }
+    &__subtitle {
+        @include flex_space_between;
+        margin: auto;
+    }
+    &__deco {
+        @include lechic__deco;
+        @include md {
+            width:120px;
+            height: 6px;
+        }
+        @include lg {
+            width: 200px;
+            height: 8px;
+        }
+    }
+    &__font--color1 {
+        color: $lechic_menu1;
+        @include md {
+            min-width: 550px;
+        }
+        @include lg {
+            margin-bottom: 40px;
+            min-width: 740px;
+        }
+    }
+    &__font--color2 {
+        color: $lechic_menu2;
+        @include md {
+            min-width: 550px;
+        }
+        @include lg {
+            margin-bottom: 40px;
+            min-width: 740px;
+        }
+    }
+    &__font--color3 {
+        color: $lechic_menu3;
+        @include md {
+            margin-bottom: 40px;
+            min-width: 550px;
+        }
+        @include lg {
+            margin-bottom: 60px;
+            min-width:740px;
+        }
+    }
+}
+.anim1 {
+    display:inline;
+    @include line_anim ($lechic_menu1);
+}
+.anim2 {
+    display:inline;
+    @include line_anim ($lechic_menu2);
+}
+.anim3 {
+    display:inline;
+    @include line_anim ($lechic_menu3);
+}

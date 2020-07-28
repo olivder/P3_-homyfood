@@ -1,0 +1,261 @@
+/* flex */
+@mixin flex_column
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin flex_center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex_space_between
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex_around
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+/*footer et header*/
+
+@mixin header
+{
+    font-family: $main_font;
+    font-size: 1.3em;
+    background-color: $primary_color;
+    text-align: center;
+    height: 100px;
+}
+
+@mixin header_h1
+{
+    color: $logo_color;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+}
+
+@mixin footer
+{
+    height: 70px;
+    background-color: $primary_color;
+    color: $logo_color;
+    position: sticky;
+    bottom:0;
+    padding: 0px 10px 0px 10px;
+    margin:auto;
+    text-align: center;
+}
+
+@mixin footer_h2
+{
+    color: $logo_color;
+    text-decoration:none;
+    font-family: $main_font;
+    font-weight: 400;
+    font-size: 1.2em;
+        &:hover{
+            animation: wiggle 100ms infinite;
+            animation-timing-function: linear;
+          }
+}
+@mixin a_header_footer {
+    color: $logo_color;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/*Autres éléments page accueil*/
+@mixin aside
+{
+    background-color: $primary_color;
+    color: $logo_color;
+    width: 260px;
+    height: 40px;
+    margin: 30px;
+    @include lg {
+        margin: 50px;
+    }
+    text-align: center;
+    border-radius: 10px;
+}
+
+@mixin aside_h2
+{
+    font-family: $main_font;
+    font-weight: 400;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+}
+
+@mixin main
+{
+    background-color: $secondary_color;
+    margin: auto;
+    @include md {
+        min-height: 860px;
+    }
+    @include lg {
+        min-height: 1100px;
+    }
+}
+
+@mixin section
+{
+    width: 270px;
+    height: 330px;
+    margin: 20px;
+    text-align: center;
+@include lg {
+    width: 380px;
+    height: 450px;
+    }
+}
+
+@mixin lanote
+{
+    background-color: $lanotebg-color;
+    color: $lanote_menu;
+    font-family: $second-font;
+}
+
+@mixin lanote__title
+{
+    color:$lanote_menu;
+    text-decoration: none;
+}
+
+@mixin lanote__icon
+{
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 5px;
+}
+
+@mixin fas {
+    background-clip: initial;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(0.25turn, #f04a5e, #f78f6a);
+}
+
+@mixin a {
+    text-decoration: none;
+}
+
+@mixin lechic {
+    background-color: $lechicbg_color;
+    color: $lechic_menu1;
+    font-family: $lechic_font;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+@mixin lechic__title--gradient {
+    font-family: $lechic_title_font;
+    background-clip: initial;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(0.25turn, $lechic_menu1, $lechic_menu_gradient);
+}
+@mixin delice {
+    background-color: $delicebg_color;
+    color: $delice_menu;
+    font-family: $delice_title_font;
+    font-weight: 100;
+    text-decoration: none;
+}
+@mixin delice__title--gradient {
+    background-clip: initial;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(0.25turn, $delice_menu_gradient1,$delice_menu_gradient2,$delice_menu_gradient3);
+}
+@mixin palette {
+    background-color: $palettebg_color;
+    color: $palette_menu;
+    font-family:$palette_title_font;
+    text-decoration: none;
+}
+@mixin palette__title--gradient {
+    background-clip: initial;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(0.25turn, $palette_menu_gradient1,$palette_menu_gradient2);
+}
+@mixin zoom {
+    &:hover{
+        transform: scale(1.3);
+        transition: all ease 600ms;
+      }
+}
+/*Eléments pages*/
+@mixin card {
+    margin:auto;
+    height:auto;
+    width:90%;
+}
+
+@mixin lanote__deco {
+    display:inline-block;
+    height: 3px;
+    width: 60px;
+}
+
+@mixin lechic__deco {
+    display: inline-block;
+    height:3px;
+    width: 50px;
+}
+@mixin delice_palette_deco {
+    display: inline-block;
+    height:3px;
+    width: 80px;
+}
+
+/* Animations pages*/
+@mixin line_anim ($color) {
+    background: linear-gradient(to top, $color 0%, $color 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+    transition: background-size .3s;
+    &:hover{
+        background-size: 100% 100%;
+    }
+}
+/* Responsive */
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+
+@mixin md {
+    @media (min-width: #{$screen-md-min}){
+        @content;
+    }
+ }
+
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }

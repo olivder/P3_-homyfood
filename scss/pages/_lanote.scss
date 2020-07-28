@@ -1,0 +1,82 @@
+.title {
+    border: none;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    @include md {
+        font-size: 1.2em;
+    }
+    @include lg {
+        font-size: 1.4em;
+    }
+}
+.lanote {
+    @include lanote;
+    @include md {
+        width:80%;
+    }
+    @include lg {
+        width: 70%;
+        padding-bottom: 90px;
+    }
+    box-shadow: $box-shadow;
+    width: 90%;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto auto 30px auto;
+    h2
+    {
+        font-size: 1.3em;
+        font-weight: bold;
+        @include md {
+            font-size: 1.6em;
+        }
+    }
+
+    .price {
+        font-weight: bold;
+    }
+    &__title {
+        @include lanote__title;
+    font-family: $lanote_title_font;
+    font-size: 3em;
+    .fas {
+        @include lanote__icon;
+        @include fas;
+    }
+    }
+    &__subtitle {
+        @include flex_center;
+        width: 90%;
+        margin: auto;
+    }
+    &__deco {
+        @include lanote__deco;
+        @include md {
+            width: 120px;
+            height: 6px;
+        }
+        @include lg {
+            width: 200px;
+            height: 8px;
+         }
+    }
+}
+
+.bottom__title {
+    @include flex_center;
+    .fas {
+        @include lanote__icon;
+        @include fas;
+        margin: auto 15px auto 0px;
+    }
+}
+.line {
+    display:inline;
+        @include line_anim ($lanote_menu);
+        margin: auto;
+         &:hover{
+             background-size: 100% 100%;
+         }
+}

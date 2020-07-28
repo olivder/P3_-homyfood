@@ -1,0 +1,157 @@
+header {
+    @include header;
+    @include flex_column;
+    @include lg {
+        font-size:2.3em;
+        height: 150px;
+    }
+
+    h1 {
+        @include header_h1;
+        @include flex_center;
+
+    }
+    a {
+        @include a_header_footer;
+        @include flex_center;
+    }
+}
+footer {
+    @include footer;
+    @include flex_space_between;
+    h2 {
+        @include footer_h2;
+        @include flex_space_between;
+        @include md {
+            font-size: 1.5em;
+        }
+    }
+    a {
+        @include a_header_footer;
+        @include flex_center;
+    }
+}
+
+aside {
+    @include aside;
+    @include flex_column;
+}
+
+.loading {
+    @include aside_h2;
+}
+
+main {
+    @include main;
+    @include flex_column;
+}
+
+section
+{
+    @include section;
+    @include flex_column;
+    box-shadow: $box_shadow;
+}
+.menu
+{
+    @include flex_column;
+    margin: 10px;
+    width: auto;
+    h2 {
+        font-size: 1.8em;
+        @include lg {
+            font-size: 2.1em;
+        }
+    }
+    h3 {
+        font-size: 1.6em;
+        @include lg {
+            font-size: 1.9em;
+        }
+    }
+
+    @include md {
+        @include flex_space_between;
+    }
+
+&__lanote {
+    @include lanote;
+    a {
+        @include a;
+    }
+    h3 {
+        @include lanote__title;
+        @include a;
+    }
+    h2 {
+        @include lanote__title;
+        font-family: $second_font;
+    }
+}
+.fas {
+        @include lanote__icon;
+        @include fas;
+}
+&__lechic {
+        @include lechic;
+        a{
+            @include a
+        }
+        h2 {
+            color: $lechic_menu1;
+        }
+        .lechic__title--gradient {
+            @include lg{
+            font-size: 1.5em;
+            }
+        }
+}
+&__delice {
+
+    @include delice;
+    a {
+        @include a
+    }
+    h2 {
+        font-family: $menu_delice_palette;
+        font-weight: lighter;
+    }
+    &__title--gradient {
+        @include delice__title--gradient;
+    }
+}
+&__palette {
+    @include palette;
+    a {
+        @include a
+    }
+    h2 {
+        color:$palette_menu;
+        font-family: $menu_delice_palette;
+        font-weight: lighter;
+    }
+    &__title--gradient {
+        @include palette__title--gradient;
+    }
+}
+
+}
+.zoom {
+    @include zoom;
+}
+.loading {
+    &__dot1 {
+        animation: dots 2s infinite ease-in-out;
+        font-size: 2em;
+    }
+    &__dot2 {
+        animation: dots 2s infinite ease-in-out;
+        animation-delay: 0.4s;
+        font-size: 2em;
+    }
+    &__dot3 {
+        animation: dots 2s infinite ease-in-out;
+        animation-delay: 0.6s;
+        font-size: 2em;
+    }
+}
