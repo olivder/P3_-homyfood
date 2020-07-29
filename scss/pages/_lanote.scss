@@ -1,6 +1,8 @@
 .title {
     border: none;
     box-shadow: none;
+    max-width: 900rem;
+    text-align: center;
     width: auto;
     height: auto;
     @include md {

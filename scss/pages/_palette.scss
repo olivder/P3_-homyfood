@@ -1,4 +1,7 @@
-
+.title  {
+    max-width: 900rem;
+    text-align: center;
+}
 .palette {
     @include palette;
     @include md {
