@@ -1,3 +1,8 @@
+
+.title  {
+    max-width: 900rem;
+    text-align: center;
+}
 .delice {
     @include delice;
     @include md {
@@ -33,7 +38,7 @@
     }
     &__title--gradient {
         @include delice__title--gradient;
-        font-size: 2em;
+        font-size: 1.8em;
         @include lg {
             font-size: 4em;
         }
